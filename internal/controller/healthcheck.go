@@ -2,7 +2,7 @@ package controller
 
 import (
 	"fmt"
-	"github.com/buker/go-basic-template/internal/config"
+	"github.com/TimeGladiator/TimeGladiator/internal/config"
 	"net/http"
 )
 

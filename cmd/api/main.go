@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/buker/go-basic-template/internal/config"
-	"github.com/buker/go-basic-template/internal/route"
+	"github.com/TimeGladiator/TimeGladiator/internal/config"
+	"github.com/TimeGladiator/TimeGladiator/internal/route"
 	"log"
 )
 

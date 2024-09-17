@@ -1,7 +1,7 @@
 package route
 
 import (
-	"github.com/buker/go-basic-template/internal/controller"
+	"github.com/TimeGladiator/TimeGladiator/internal/controller"
 	"net/http"
 )
 
