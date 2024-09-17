@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/TimeGladiator/TimeGladiator/internal/config"
 	"net/http"
 	"time"
+
+	"github.com/TimeGladiator/TimeGladiator/internal/config"
 )
 
 // Serve serves an HTTP server

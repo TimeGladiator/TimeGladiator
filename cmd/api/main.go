@@ -1,9 +1,10 @@
 package main
 
 import (
+	"log"
+
 	"github.com/TimeGladiator/TimeGladiator/internal/config"
 	"github.com/TimeGladiator/TimeGladiator/internal/route"
-	"log"
 )
 
 func main() {

@@ -2,8 +2,9 @@ package controller
 
 import (
 	"fmt"
-	"github.com/TimeGladiator/TimeGladiator/internal/config"
 	"net/http"
+
+	"github.com/TimeGladiator/TimeGladiator/internal/config"
 )
 
 // HealthcheckHandler handles request to /v1/healthcheck

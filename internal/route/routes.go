@@ -1,8 +1,9 @@
 package route
 
 import (
-	"github.com/TimeGladiator/TimeGladiator/internal/controller"
 	"net/http"
+
+	"github.com/TimeGladiator/TimeGladiator/internal/controller"
 )
 
 func RegisterRoutes() *http.ServeMux {
