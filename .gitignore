@@ -98,3 +98,4 @@ vendor
 coverage.txt
 tempo-data
 tempo-data/*
+.env
