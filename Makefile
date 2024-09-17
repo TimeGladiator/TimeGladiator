@@ -74,11 +74,11 @@ fmt: ## run gofmt on all Go package
 
 .PHONY: run
 run: ## run the API server
-	GOARCH=${GOARCH} go run ${LDFLAGS} main.go
+	GOARCH=${GOARCH} go run ${LDFLAGS} ./cmd/api
 
 .PHONY: build
 build: ## build the API server
-	GOARCH=${GOARCH} go build ${LDFLAGS} -o bin/main main.go
+	GOARCH=${GOARCH} go build ${LDFLAGS} -o ./bin/main ./cmd/api
 
 .PHONY: test
 test: ## run the tests

@@ -8,9 +8,15 @@ import (
 	"time"
 )
 
+var Version string
+
 type config struct {
 	port int
 	env  string
+}
+type application struct {
+	config config
+	// TODO: Add logger
 }
 
 var cfg config
@@ -24,8 +30,10 @@ func init() {
 
 func main() {
 	mux := http.NewServeMux()
+	app := &application{config: cfg}
 
 	mux.HandleFunc("/v1/hello", helloHandler)
+	mux.HandleFunc("/v1/healthcheck", app.healthcheckHandler)
 
 	srv := &http.Server{
 		Addr:         fmt.Sprintf(":%d", cfg.port),
