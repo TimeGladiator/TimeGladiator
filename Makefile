@@ -1,8 +1,8 @@
 MODULE = $(shell go list -m)
 VERSION ?= $(shell git describe --tags --always --dirty --match=v* 2> /dev/null || echo "1.0.0")
 PACKAGES := $(shell go list ./... | grep -v /vendor/)
-LDFLAGS := -ldflags "-X main.Version=${VERSION}"
-GOARCH := arm64
+LDFLAGS := -ldflags "-X ${MODULE}/internal/config.Version=${VERSION}"
+GOARCH := $(shell go env GOARCH)
 
 
 default: help
@@ -74,11 +74,11 @@ fmt: ## run gofmt on all Go package
 
 .PHONY: run
 run: ## run the API server
-	GOARCH=${GOARCH} go run ${LDFLAGS} main.go
+	GOARCH=${GOARCH} go run ${LDFLAGS} ./cmd/api
 
 .PHONY: build
 build: ## build the API server
-	GOARCH=${GOARCH} go build ${LDFLAGS} -o bin/main main.go
+	GOARCH=${GOARCH} go build ${LDFLAGS} -o ./bin/main ./cmd/api
 
 .PHONY: test
 test: ## run the tests
